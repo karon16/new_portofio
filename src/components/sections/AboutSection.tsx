@@ -18,10 +18,10 @@ export function AboutSection() {
     ];
 
     const stats = [
-        { label: "Projects", value: "12+" },
-        { label: "Clients", value: "05" },
-        { label: "Papers", value: "03" },
-        { label: "Conferences", value: "08" },
+        { label: "Projects", value: "10+" },
+        { label: "Clients", value: "03" },
+        { label: "Papers", value: "00" },
+        { label: "Conferences", value: "00" },
     ];
 
     return (
