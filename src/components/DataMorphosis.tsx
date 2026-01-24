@@ -5,7 +5,11 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { useTheme } from "next-themes";
 
-function MorphingParticles() {
+interface MorphingParticlesProps {
+    startRadius?: number;
+}
+
+function MorphingParticles({ startRadius = 1.5 }: MorphingParticlesProps) {
     const { theme } = useTheme();
     const particleColor = theme === 'light' ? "#171717" : "#e8e8e8";
 
@@ -18,7 +22,8 @@ function MorphingParticles() {
         const targets = new Float32Array(count * 3);
         const sphereTargets = new Float32Array(count * 3);
 
-        const startRadius = 3.5;
+
+
         for (let i = 0; i < count; i++) {
             const u = Math.random();
             const v = Math.random();
@@ -50,7 +55,7 @@ function MorphingParticles() {
         }
 
         return { positions, targets, sphereTargets };
-    }, []);
+    }, [startRadius]);
 
     const timeRef = useRef(0);
 
@@ -102,10 +107,10 @@ function MorphingParticles() {
                 />
             </bufferGeometry>
             <pointsMaterial
-                size={0.03}
+                size={0.04}
                 color={particleColor}
                 transparent
-                opacity={0.8}
+                opacity={1}
                 sizeAttenuation
                 blending={THREE.AdditiveBlending}
             />
@@ -113,7 +118,7 @@ function MorphingParticles() {
     );
 }
 
-export default function DataMorphosis() {
+export default function DataMorphosis({ startRadius }: { startRadius: number }) {
     return (
         <div className="w-full h-full">
             <Canvas
@@ -121,7 +126,7 @@ export default function DataMorphosis() {
                 dpr={[1, 2]}
                 gl={{ alpha: true, antialias: true }}
             >
-                <MorphingParticles />
+                <MorphingParticles startRadius={startRadius} />
             </Canvas>
         </div>
     );

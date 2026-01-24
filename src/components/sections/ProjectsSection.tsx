@@ -24,36 +24,36 @@ export function ProjectsSection() {
         {
             title: "Multimodal Crisis Analysis",
             description: "End-to-end AI system extracting disaster intelligence from social media using Differential Attention and Feature Fusion.",
-            icon: <Map className="text-[var(--foreground)] opacity-70 group-hover:opacity-100 transition-colors duration-500" size={64} />,
+            icon: <Map className="text-[var(--foreground)] opacity-95 group-hover:opacity-100 transition-colors duration-500" size={64} />,
             cta: "VIEW PROJECT",
             link: "#"
         },
         {
             title: "SpottyTunes",
             description: "Modern music streaming app using Spotify API & MockAPI for personalized playlists.",
-            icon: <Music className="text-[var(--foreground)] opacity-70 group-hover:opacity-100 transition-colors duration-500" size={64} />,
+            icon: <Music className="text-[var(--foreground)] opacity-95 group-hover:opacity-100 transition-colors duration-500" size={64} />,
             cta: "VIEW REPOSITORY",
             link: "https://github.com/karon16/spotty-tunes-webapp"
         },
         {
             title: "Jikjjang",
             description: "Flutter mobile app connecting job-seeking foreigners in Korea with AI-driven career guidance.",
-            icon: <Smartphone className="text-[var(--foreground)] opacity-70 group-hover:opacity-100 transition-colors duration-500" size={64} />,
+            icon: <Smartphone className="text-[var(--foreground)] opacity-95 group-hover:opacity-100 transition-colors duration-500" size={64} />,
             cta: "VIEW REPOSITORY",
             link: "https://github.com/karon16/jikjjang"
         },
         {
             title: "AI Genkit Evaluator",
             description: "Educational code evaluation system leveraging Firebase Genkit and Google AI.",
-            icon: <Code className="text-[var(--foreground)] opacity-70 group-hover:opacity-100 transition-colors duration-500" size={64} />,
+            icon: <Code className="text-[var(--foreground)] opacity-95 group-hover:opacity-100 transition-colors duration-500" size={64} />,
             cta: "VIEW PROJECT",
             link: "#"
         }
     ];
 
     return (
-        <div className="h-full w-full p-8 md:p-24 bg-[var(--background)] flex flex-col justify-center relative">
-            <h2 className="text-4xl font-bold mb-12 text-[var(--foreground)] self-center"><span className="opacity-50">03.</span> Projects</h2>
+        <div className="min-h-screen w-full p-8 md:p-24 bg-[var(--background)] flex flex-col justify-center relative">
+            <h2 className="text-4xl font-bold mb-12 text-[var(--foreground)] self-center"><span className="opacity-70">03.</span> Projects</h2>
 
             {/* Embla Carousel Viewport */}
             <div className="overflow-hidden cursor-grab active:cursor-grabbing w-full" ref={emblaRef}>
@@ -72,8 +72,8 @@ export function ProjectsSection() {
                                 </div>
                                 <div className="p-6">
                                     <h3 className="text-xl font-bold mb-2 text-[var(--foreground)]">{project.title}</h3>
-                                    <p className="opacity-70 mb-6 text-sm line-clamp-2 text-[var(--foreground)]">{project.description}</p>
-                                    <div className="flex items-center gap-2 text-sm hover:opacity-100 opacity-60 text-[var(--foreground)] transition-colors">
+                                    <p className="opacity-95 mb-6 text-sm line-clamp-2 text-[var(--foreground)]">{project.description}</p>
+                                    <div className="flex items-center gap-2 text-sm hover:opacity-100 opacity-95 text-[var(--foreground)] transition-colors">
                                         {project.cta} <ArrowRight size={16} />
                                     </div>
                                 </div>

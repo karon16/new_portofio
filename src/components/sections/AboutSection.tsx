@@ -25,8 +25,8 @@ export function AboutSection() {
     ];
 
     return (
-        <div className="h-full w-full p-8 md:p-24 flex flex-col justify-center bg-[var(--background)]">
-            <h2 className="text-4xl font-bold mb-12 self-center text-[var(--foreground)]"><span className="opacity-50">02.</span> Fullstack & ML Engineer</h2>
+        <div className="min-h-screen w-full p-8 md:p-24 flex flex-col justify-center bg-[var(--background)]">
+            <h2 className="text-4xl font-bold mb-12 self-center text-[var(--foreground)]"><span className="opacity-70">02.</span> Fullstack & ML Engineer</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 h-auto md:h-[60vh]">
 
@@ -34,12 +34,12 @@ export function AboutSection() {
                 <div className="bg-[var(--card-bg)] border border-[var(--border)] p-6 rounded-2xl md:col-span-2 flex flex-col justify-between hover:border-[var(--muted)] transition-colors">
                     <div>
                         <h3 className="text-2xl font-bold mb-4 text-[var(--foreground)]">Seoul Based.</h3>
-                        <p className="text-[var(--foreground)] opacity-70 text-lg leading-relaxed">
+                        <p className="text-[var(--foreground)] opacity-95 text-lg leading-relaxed">
                             I specialize in building scalable web applications and deploying machine learning models. Merging the gap between research and production.
                         </p>
                     </div>
                     <div className="flex gap-4 mt-8 items-center justify-center content-center">
-                        <div className="px-4 py-2 bg-[var(--background)] rounded-full border border-[var(--border)] text-sm text-green-500 font-medium">
+                        <div className="px-4 py-2  bg-green-500 dark:bg-[var(--background)] rounded-full border border-[var(--border)]  text-sm dark:text-green-500 text-white font-bold">
                             ● OPEN TO WORK
                         </div>
                     </div>
@@ -52,7 +52,7 @@ export function AboutSection() {
                         <div key={stat.label} className="bg-[var(--card-bg)] border border-[var(--border)] rounded-2xl md:col-span-1 p-4 grid grid-cols-2 gap-2 place-items-center hover:border-[var(--muted)] transition-colors">
                             <div className="text-center">
                                 <div className="text-4xl font-bold text-[var(--foreground)] mb-2">{stat.value}</div>
-                                <div className="text-sm opacity-50 uppercase tracking-widest text-[var(--foreground)]">{stat.label}</div>
+                                <div className="text-sm opacity-95 uppercase tracking-widest text-[var(--foreground)]">{stat.label}</div>
                             </div>
                         </div>
                     ))}
@@ -60,10 +60,10 @@ export function AboutSection() {
 
                 {/* Box 3: Tech Stack */}
                 <div className="bg-[var(--card-bg)] border border-[var(--border)] p-6 rounded-2xl md:col-span-4 flex flex-col justify-center hover:border-[var(--muted)] transition-colors">
-                    <span className="opacity-50 text-sm uppercase tracking-wider mb-6 text-[var(--foreground)]">Tech Stack</span>
+                    <span className="opacity-95 text-sm uppercase tracking-wider mb-6 text-[var(--foreground)]">Tech Stack</span>
                     <div className="flex flex-wrap gap-3">
                         {techStack.map((tech) => (
-                            <span key={tech.name} className="px-4 py-2 bg-[var(--background)] text-[var(--foreground)] rounded-lg text-sm border border-[var(--border)] hover:bg-[var(--muted)] transition-colors flex items-center gap-2">
+                            <span key={tech.name} className="px-4 py-2 bg-[var(--secondary-background)] text-[var(--foreground)] rounded-lg text-sm border border-[var(--border)] hover:bg-[var(--muted)] transition-colors flex items-center gap-2">
                                 {tech.icon} {tech.name}
                             </span>
                         ))}

@@ -30,7 +30,7 @@ export function HeroSection() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6 }}
-                    className="text-xl md:text-2xl opacity-80 max-w-xl leading-relaxed mb-10 text-[var(--foreground)]"
+                    className="text-xl md:text-2xl opacity-95 max-w-xl leading-relaxed mb-10 text-[var(--foreground)]"
                 >
                     Bridging Model Architecture with User Experience.
                 </motion.p>
@@ -41,7 +41,7 @@ export function HeroSection() {
                     transition={{ delay: 0.8 }}
                     className="flex flex-wrap gap-4"
                 >
-                    <a href="mailto:christopherbuhendwa2000@gmail.com" className="px-6 py-3 bg-[var(--foreground)] text-[var(--background)] font-bold rounded-full hover:opacity-80 transition-opacity flex items-center gap-2">
+                    <a href="mailto:christopherbuhendwa2000@gmail.com" className="px-6 py-3 bg-[var(--foreground)] text-[var(--background)] font-bold rounded-full hover:opacity-100 transition-opacity flex items-center gap-2">
                         <Mail size={18} /> Work with me
                     </a>
                     <a href="https://github.com/karon16" target="_blank" rel="noopener noreferrer" className="p-3 border border-[var(--border)] rounded-full hover:bg-[var(--muted)] transition-colors text-[var(--foreground)]">
@@ -55,7 +55,7 @@ export function HeroSection() {
 
             {/* Right: Abstract Visual */}
             <div className="absolute inset-0 md:relative md:w-1/2 bg-[var(--muted)] overflow-hidden flex items-center justify-center">
-                <DataMorphosis />
+                <DataMorphosis startRadius={3.5} />
             </div>
         </div>
     );

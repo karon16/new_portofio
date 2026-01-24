@@ -6,8 +6,8 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { ThemeToggle } from "./ThemeToggle";
-import { useScrollNavigation } from "@/hooks/useScrollNavigation";
-import { motion, useSpring } from "framer-motion";
+import { useActiveSectionObserver } from "@/hooks/useActiveSectionObserver";
+import { motion } from "framer-motion";
 import CustomCursor from "./CustomCursor";
 
 const slides = [
@@ -18,13 +18,18 @@ const slides = [
 ];
 
 export default function PortfolioContainer() {
-    const { activeSection, setActiveSection } = useScrollNavigation(slides.length);
+    const { activeSection, observerRefs } = useActiveSectionObserver(slides.map(s => s.id));
+
+    const scrollToSection = (idx: number) => {
+        observerRefs.current[idx]?.scrollIntoView({ behavior: "smooth" });
+    };
 
     return (
-        <div className="relative h-full w-full">
+        <div className="relative h-screen w-full overflow-hidden">
             <ThemeToggle />
             <CustomCursor />
 
+            {/* Progress Bar */}
             <div className="absolute top-0 left-0 w-full h-1 z-50 bg-neutral-800/20">
                 <motion.div
                     className="h-full bg-[var(--foreground)]"
@@ -34,11 +39,12 @@ export default function PortfolioContainer() {
                 />
             </div>
 
+            {/* Navigation Dots (Desktop) */}
             <div className="hidden md:flex flex-col gap-4 fixed right-8 top-1/2 -translate-y-1/2 z-40">
                 {slides.map((_, idx) => (
                     <button
                         key={idx}
-                        onClick={() => setActiveSection(idx)}
+                        onClick={() => scrollToSection(idx)}
                         className={`w-3 h-3 rounded-full transition-all duration-300 ${activeSection === idx
                             ? "bg-[var(--foreground)] scale-125"
                             : "bg-[var(--foreground)] opacity-30 hover:opacity-60 hover:scale-110"
@@ -48,14 +54,17 @@ export default function PortfolioContainer() {
                 ))}
             </div>
 
-            <div
-                className="h-full w-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
-                style={{ transform: `translateY(-${activeSection * 100}%)` }}
-            >
-                {slides.map((slide) => (
-                    <div key={slide.id} className="h-full w-full overflow-hidden relative">
+            {/* Main Scroll Container */}
+            <div className="h-full w-full overflow-y-auto snap-y snap-mandatory scroll-smooth">
+                {slides.map((slide, idx) => (
+                    <section
+                        key={slide.id}
+                        id={slide.id}
+                        ref={(el) => { observerRefs.current[idx] = el; }}
+                        className="h-screen w-full snap-start relative"
+                    >
                         {slide.component}
-                    </div>
+                    </section>
                 ))}
             </div>
         </div>

@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --font-doto: "Doto", sans-serif;
 }
 
 :root {
     --background: #ffffff;
-    --foreground: #000000;
+    --foreground: #000;
     --muted: #f5f5f5;
-    --card-bg: #e5e5e5;
-    --border: #e5e5e5;
+    --card-bg: #f4f4f4;
+    --border: #bbbbbb;
     --accent: #040404;
     --accent-foreground: #ffffff;
+    --secondary-background: #eaeaea;
 }
 
 .dark {
@@ -22,6 +25,7 @@
     --border: #262626;
     --accent: #ffffff;
     --accent-foreground: #000000;
+    --secondary-background: #151515;
 }
 
 html,
