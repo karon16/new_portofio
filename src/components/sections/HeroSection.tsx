@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Github, Mail, FileText } from "lucide-react";
 import DataMorphosis from "@/components/DataMorphosis";
+import Link from "next/link";
 
 export function HeroSection() {
     return (
@@ -22,7 +23,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, ease: "circOut" }}
-                    className="text-5xl md:text-8xl font-black tracking-tight mb-6 leading-tight text-[var(--foreground)]"
+                    className="text-5xl md:text-7xl sm:text-8xl font-black tracking-tight mb-6 leading-tight text-[var(--foreground)]"
                 >
                     Christopher <br /> Buhendwa
                 </motion.h1>
@@ -44,18 +45,19 @@ export function HeroSection() {
                     <a href="mailto:christopherbuhendwa2000@gmail.com" className="px-6 py-3 bg-[var(--foreground)] text-[var(--background)] font-bold rounded-full hover:opacity-100 transition-opacity flex items-center gap-2">
                         <Mail size={18} /> Work with me
                     </a>
-                    <a href="https://github.com/karon16" target="_blank" rel="noopener noreferrer" className="p-3 border border-[var(--border)] rounded-full hover:bg-[var(--muted)] transition-colors text-[var(--foreground)]">
+                    <a href="https://github.com/karon16" target="_blank" rel="noopener noreferrer" className="p-3 border border-[var(--border)] border-2 rounded-full hover:bg-[var(--muted)] transition-colors text-[var(--foreground)]">
                         <Github size={24} />
                     </a>
-                    <a href="/paper.pdf" className="px-6 py-3 border border-[var(--border)] text-[var(--foreground)] rounded-full hover:bg-[var(--muted)] transition-colors flex items-center gap-2">
+                    <Link href="/papers" className="px-6 py-3 border border-[var(--border)] border-2 text-[var(--foreground)] rounded-full hover:bg-[var(--muted)] transition-colors flex items-center gap-2">
                         <FileText size={18} /> Recent Papers
-                    </a>
+                    </Link>
                 </motion.div>
             </div>
 
             {/* Right: Abstract Visual */}
             <div className="absolute inset-0 md:relative md:w-1/2 bg-[var(--muted)] overflow-hidden flex items-center justify-center">
-                <DataMorphosis startRadius={3.5} />
+                {/* addapt the start radius to the screen size */}
+                <DataMorphosis startRadius={typeof window !== 'undefined' && window.innerWidth < 1400 ? 2.7 : 3.5} />
             </div>
         </div>
     );
