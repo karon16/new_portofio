@@ -17,7 +17,7 @@ export function AboutSection() {
         { name: "Next js", icon: <SiNextdotjs size={18} /> }
     ];
 
-    const stats = [git st
+    const stats = [
         { label: "Clients", value: "03" },
         { label: "Papers", value: "00" },
         { label: "Conferences", value: "00" },
