@@ -1,7 +1,3 @@
----
-trigger: always_on
----
-
 # Personal Portfolio - Project Standards
 
 This document establishes the workflow rules and design consistencies for my personal portfolio project.

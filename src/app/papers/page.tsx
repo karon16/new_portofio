@@ -8,28 +8,10 @@ import CustomCursor from "@/components/CustomCursor";
 
 const papers = [
     {
-        title: "Multimodal Crisis Analysis via Differential Attention",
-        conference: "CVPR 2025 (Under Review)",
-        description: "A novel architecture leveraging differential attention mechanisms to fuse textual and visual data from social media for real-time disaster intelligence extraction.",
-        link: "#"
-    },
-    {
-        title: "Efficient Transformers for Edge Devices",
-        conference: "NeurIPS 2024",
-        description: "Optimizing transformer inference latency on mobile hardware using quantization-aware training and structural pruning techniques.",
-        link: "#"
-    },
-    {
-        title: "Generative AI in Code Evaluation",
-        conference: "ICSE 2024",
-        description: "An empirical study on the effectiveness of LLMs like Gemini and GPT-4 in automated code grading and feedback generation for computer science education.",
-        link: "#"
-    },
-    {
-        title: "Zero-Shot Object Detection in Cluttered Environments",
-        conference: "ECCV 2024",
-        description: "Improving zero-shot performance in highly occluded scenes using semantic context priors and synthetic data augmentation.",
-        link: "#"
+        title: "Multimodal Crisis Event Analysis Mapping System",
+        conference: "KCC 2026 (Under Review)",
+        description: "Submitted to KCC 2026 (https://www.kiise.or.kr/conference/kcc/2026/) and pending approval. An AI-based system evaluating disaster data across informativeness, humanitarian impact, and damage severity with an interactive map interface.",
+        link: "/심사용+논문.pdf"
     }
 ];
 
@@ -55,7 +37,7 @@ export default function PapersPage() {
             </motion.div>
 
             {/* Papers Grid */}
-            {/*<div className="max-w-5xl mx-auto grid gap-8">
+            <div className="max-w-5xl mx-auto grid gap-8">
                 {papers.map((paper, index) => (
                     <motion.div
                         key={index}
@@ -88,7 +70,7 @@ export default function PapersPage() {
                         </div>
                     </motion.div>
                 ))}
-            </div>*/}
+            </div>
         </div>
     );
 }

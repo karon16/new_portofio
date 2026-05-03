@@ -22,10 +22,24 @@ export function ProjectsSection() {
 
     const projects = [
         {
+            title: "JusticeCongo AI",
+            description: "AI-powered RAG platform for the Democratic Republic of Congo's legal corpus.",
+            icon: <Brain className="text-[var(--foreground)] opacity-95 group-hover:opacity-100 transition-colors duration-500" size={64} />,
+            cta: "PERSONAL PROJECT FOR CONGOLESE NGO",
+            link: "#"
+        },
+        {
             title: "Multimodal Crisis Analysis",
             description: "End-to-end AI system extracting disaster intelligence from social media using Differential Attention and Feature Fusion.",
             icon: <Map className="text-[var(--foreground)] opacity-95 group-hover:opacity-100 transition-colors duration-500" size={64} />,
             cta: "VIEW PROJECT",
+            link: "#"
+        },
+        {
+            title: "AI Genkit Evaluator",
+            description: "Educational code evaluation system leveraging Firebase Genkit and Google AI.",
+            icon: <Code className="text-[var(--foreground)] opacity-95 group-hover:opacity-100 transition-colors duration-500" size={64} />,
+            cta: "COMPANY PROJECT (INTERNSHIP)",
             link: "#"
         },
         {
@@ -42,13 +56,8 @@ export function ProjectsSection() {
             cta: "VIEW REPOSITORY",
             link: "https://github.com/karon16/jikjjang"
         },
-        {
-            title: "AI Genkit Evaluator",
-            description: "Educational code evaluation system leveraging Firebase Genkit and Google AI.",
-            icon: <Code className="text-[var(--foreground)] opacity-95 group-hover:opacity-100 transition-colors duration-500" size={64} />,
-            cta: "VIEW PROJECT",
-            link: "#"
-        }
+
+
     ];
 
     return (

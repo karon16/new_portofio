@@ -1,6 +1,7 @@
 "use client";
 
-import { SiJavascript, SiTypescript, SiReact, SiCss3, SiDocker, SiNodedotjs, SiGit, SiRedux, SiPython, SiHtml5, SiNextdotjs } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiReact, SiCss3, SiDocker, SiNodedotjs, SiGit, SiRedux, SiPython, SiHtml5, SiNextdotjs, SiPostgresql } from "react-icons/si";
+import { Brain, Bot, Database, Network } from "lucide-react";
 
 export function AboutSection() {
     const techStack = [
@@ -14,13 +15,19 @@ export function AboutSection() {
         { name: "Redux", icon: <SiRedux size={18} /> },
         { name: "Python", icon: <SiPython size={18} /> },
         { name: "Html5", icon: <SiHtml5 size={18} /> },
-        { name: "Next js", icon: <SiNextdotjs size={18} /> }
+        { name: "Next js", icon: <SiNextdotjs size={18} /> },
+        { name: "PostgreSQL", icon: <SiPostgresql size={18} /> },
+        { name: "RAG", icon: <Network size={18} /> },
+        { name: "LLM", icon: <Brain size={18} /> },
+        { name: "Agentic AI", icon: <Bot size={18} /> },
+        { name: "Vector Database", icon: <Database size={18} /> }
     ];
 
     const stats = [
         { label: "Clients", value: "03" },
-        { label: "Papers", value: "00" },
+        { label: "Papers", value: "01" },
         { label: "Conferences", value: "00" },
+        // {label: ""}
     ];
 
     return (
