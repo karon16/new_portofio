@@ -43,18 +43,18 @@ export function ProjectsSection() {
             link: "#"
         },
         {
-            title: "SpottyTunes",
-            description: "Modern music streaming app using Spotify API & MockAPI for personalized playlists.",
-            icon: <Music className="text-[var(--foreground)] opacity-95 group-hover:opacity-100 transition-colors duration-500" size={64} />,
-            cta: "VIEW REPOSITORY",
-            link: "https://github.com/karon16/spotty-tunes-webapp"
-        },
-        {
             title: "Jikjjang",
             description: "Flutter mobile app connecting job-seeking foreigners in Korea with AI-driven career guidance.",
             icon: <Smartphone className="text-[var(--foreground)] opacity-95 group-hover:opacity-100 transition-colors duration-500" size={64} />,
             cta: "VIEW REPOSITORY",
             link: "https://github.com/karon16/jikjjang"
+        },
+        {
+            title: "SpottyTunes",
+            description: "Modern music streaming app using Spotify API & MockAPI for personalized playlists.",
+            icon: <Music className="text-[var(--foreground)] opacity-95 group-hover:opacity-100 transition-colors duration-500" size={64} />,
+            cta: "VIEW REPOSITORY",
+            link: "https://github.com/karon16/spotty-tunes-webapp"
         },
 
 
